@@ -2,6 +2,9 @@ FROM ghcr.io/oracle/oraclelinux:7-slim
 
 ARG user=webhook
 
+RUN yum -y update && \
+    yum -y clean all
+
 RUN echo "$user:x:1000:1000::/home/$user:/bin/bash" >> /etc/passwd && \
     echo "$user:x:1000:" >> /etc/group && \
     mkdir /home/$user && \
