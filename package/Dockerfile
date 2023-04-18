@@ -1,4 +1,4 @@
-FROM registry.suse.com/bci/bci-micro:15.4.17.1
+FROM ghcr.io/oracle/oraclelinux:7-slim
 
 ARG user=webhook
 
@@ -8,6 +8,7 @@ RUN echo "$user:x:1000:1000::/home/$user:/bin/bash" >> /etc/passwd && \
     chown -R $user:$user /home/$user
 
 COPY bin/webhook /usr/bin/
+COPY LICENSE README.md THIRD_PARTY_LICENSES.txt SECURITY.md /licenses/
 
 USER $user
 
