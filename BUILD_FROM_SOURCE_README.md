@@ -1,13 +1,13 @@
 # Build Instructions
 
-The base tag this release is branched from is `v0.3.5`
+The base tag this release is branched from is `v0.3.6`
 
 ###Create Environment Variables
 
 ```
 export DOCKER_REPO=<Docker Repository>
 export DOCKER_NAMESPACE=<Docker Namespace>
-export DOCKER_TAG=v0.3.5-BFS
+export DOCKER_TAG=v0.3.6-BFS
 ```
 
 ###Build and Push Images
@@ -27,7 +27,7 @@ TAG=${DOCKER_TAG} make
 Once the build completes successfully, tag and push the images:
 
 ```
-docker tag rancher/rancher-webhook:v0.3.5 ${DOCKER_REPO}/${DOCKER_NAMESPACE}/rancher:${DOCKER_TAG}
+docker tag rancher/rancher-webhook:v0.3.6 ${DOCKER_REPO}/${DOCKER_NAMESPACE}/rancher:${DOCKER_TAG}
 docker push ${DOCKER_REPO}/${DOCKER_NAMESPACE}/rancher-webhook:${DOCKER_TAG}
 ```
 
