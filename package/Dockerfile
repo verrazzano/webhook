@@ -1,9 +1,7 @@
-FROM ghcr.io/oracle/oraclelinux:8-slim
+# Use distroless as minimal base image to package the manager binary
+FROM ghcr.io/verrazzano/ol8-static:v0.0.1-20231102152128-e7afc807
 
 ARG user=webhook
-
-RUN microdnf -y update && \
-    microdnf -y clean all
 
 RUN echo "$user:x:1000:1000::/home/$user:/bin/bash" >> /etc/passwd && \
     echo "$user:x:1000:" >> /etc/group && \
