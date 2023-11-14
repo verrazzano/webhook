@@ -1,9 +1,9 @@
-FROM ghcr.io/oracle/oraclelinux:7-slim
+FROM ghcr.io/oracle/oraclelinux:8-slim
 
 ARG user=webhook
 
-RUN yum -y update && \
-    yum -y clean all
+RUN microdnf -y update && \
+    microdnf -y clean all
 
 RUN echo "$user:x:1000:1000::/home/$user:/bin/bash" >> /etc/passwd && \
     echo "$user:x:1000:" >> /etc/group && \
