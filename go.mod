@@ -6,6 +6,7 @@ go 1.19
 replace github.com/rancher/wrangler v1.1.1 => github.com/rancher/wrangler v1.1.1-0.20230705223603-201b4da5bdaf
 
 replace (
+	golang.org/x/net => golang.org/x/net v0.17.0
 	k8s.io/api => k8s.io/api v0.25.12
 	k8s.io/apiextensions-apiserver => k8s.io/apiextensions-apiserver v0.25.12
 	k8s.io/apimachinery => k8s.io/apimachinery v0.25.12
@@ -47,7 +48,7 @@ require (
 	github.com/sirupsen/logrus v1.9.3
 	github.com/stretchr/testify v1.8.4
 	golang.org/x/exp v0.0.0-20230206171751-46f607a40771
-	golang.org/x/text v0.11.0
+	golang.org/x/text v0.13.0
 	golang.org/x/tools v0.9.3
 	k8s.io/api v0.25.12
 	k8s.io/apiextensions-apiserver v0.25.12
@@ -117,13 +118,13 @@ require (
 	github.com/spf13/cast v1.5.0 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/stoewer/go-strcase v1.2.0 // indirect
-	golang.org/x/crypto v0.11.0 // indirect
+	golang.org/x/crypto v0.14.0 // indirect
 	golang.org/x/mod v0.10.0 // indirect
 	golang.org/x/net v0.12.0 // indirect
 	golang.org/x/oauth2 v0.10.0 // indirect
 	golang.org/x/sync v0.3.0 // indirect
-	golang.org/x/sys v0.10.0 // indirect
-	golang.org/x/term v0.10.0 // indirect
+	golang.org/x/sys v0.13.0 // indirect
+	golang.org/x/term v0.13.0 // indirect
 	golang.org/x/time v0.3.0 // indirect
 	gomodules.xyz/jsonpatch/v2 v2.2.0 // indirect
 	google.golang.org/appengine v1.6.7 // indirect
