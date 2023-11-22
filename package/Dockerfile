@@ -5,7 +5,7 @@ COPY . /go/src/github.com/rancher/webhook/
 RUN microdnf update -y --setopt=install_weak_deps=0 --setopt=tsflags=nodocs && \
     microdnf install -y golang-1.20.10-1.module+el8.9.0+90068+08775a1f.x86_64 && \
     microdnf install -y git && \
-    cd /go/src/github.com/rancher/fleet/scripts && \
+    cd /go/src/github.com/rancher/webhook/scripts && \
     ./build && \
     ./test
 
