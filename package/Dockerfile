@@ -1,4 +1,6 @@
 FROM ghcr.io/oracle/oraclelinux:8-slim as build
+ARG ARCH
+ENV ARCH=$ARCH
 
 COPY . /go/src/github.com/rancher/webhook/
 
