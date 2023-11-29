@@ -23,7 +23,7 @@ FROM ghcr.io/verrazzano/ol8-static:v0.0.1-20231102152128-e7afc807
 ARG user=webhook
 
 COPY --from=build /etc/passwd /etc/passwd
-COPY --from=build /etc/groups /etc/group
+COPY --from=build /etc/group /etc/group
 
 COPY --from=build /go/src/github.com/rancher/webhook/bin/webhook /usr/bin/
 COPY LICENSE README.md THIRD_PARTY_LICENSES.txt SECURITY.md /licenses/
